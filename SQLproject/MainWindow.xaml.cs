@@ -32,5 +32,25 @@ namespace SQLproject
         {
             View.Content = new QuerysPage();
         }
+        private void ManagerWindow_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (Pages.SelectedItem == null)
+                return;
+            string option = ((TextBlock)Pages.SelectedItem).Text;
+            switch (option)
+            {
+                case "Querys":
+                    View.Content = new QuerysPage();
+                    break;
+                case "Tables":
+                    View.Content = new TablesPage(); break;
+                case "Exit":
+                    Close();
+                    break;
+                default:
+                    break;
+            }
+        }
+
     }
 }

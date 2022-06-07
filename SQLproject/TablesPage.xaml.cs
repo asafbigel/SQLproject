@@ -24,5 +24,10 @@ namespace SQLproject
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            new TableWindows(TableListView).Show();
+        }
     }
 }

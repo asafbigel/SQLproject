@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace SQLproject
 {
     /// <summary>
-    /// Interaction logic for QuerysPage.xaml
+    /// Interaction logic for QueryWindows.xaml
     /// </summary>
-    public partial class QuerysPage : Page
+    public partial class QueryWindows : Window
     {
-        public QuerysPage()
+        public QueryWindows(ListView querysListView)
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            new QueryWindows(QuerysListView).Show();
         }
     }
 }
