@@ -1,0 +1,35 @@
+﻿<Window x:Class="SQLproject.TablesWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SQLproject"
+        mc:Ignorable="d"
+        Title="TablesWindows" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="657*" />
+            <ColumnDefinition Width="143*" />
+        </Grid.ColumnDefinitions>
+        <Frame x:Name="View" Grid.Column="0" NavigationUIVisibility="Hidden" Margin="50,50,20,50"/>
+        <ListBox x:Name="Querys" Grid.Column="1" IsEnabled="{Binding IsChecked, ElementName=EnableListBox}"
+                 SelectionChanged ="Querys_SelectionChanged" FontSize="24" HorizontalAlignment="Center"
+                 VerticalAlignment="Center" Panel.ZIndex="60" BorderBrush="White" Height="184" Width="92" >
+            <TextBlock Text="Query1" Margin="0,0,0,0" />
+            <TextBlock Text="Query2" Margin="0,0,0,0" />
+            <TextBlock Text="Query3" Margin="0,0,0,0" />
+            <TextBlock Text="Query3" Margin="0,0,0,0" />
+            <TextBlock Text="Exit" Margin="0,0,0,0" />
+        </ListBox>
+        <ListBox x:Name="Tables" Grid.Column="1" IsEnabled="{Binding IsChecked, ElementName=EnableListBox}"
+                 SelectionChanged ="Tables_SelectionChanged" FontSize="24" HorizontalAlignment="Center"
+                 VerticalAlignment="Center" Panel.ZIndex="60" BorderBrush="White" Height="184" Width="82" >
+            <TextBlock Text="Table1" Margin="0,0,0,0" />
+            <TextBlock Text="Table2" Margin="0,0,0,0" />
+            <TextBlock Text="Table3" Margin="0,0,0,0" />
+            <TextBlock Text="Table4" Margin="0,0,0,0" />
+            <TextBlock Text="Exit" Margin="0,0,0,0" />
+        </ListBox>
+
+    </Grid>
+</Window>

@@ -19,8 +19,9 @@ namespace SQLproject
     /// </summary>
     public partial class TableWindows : Window
     {
-        public TableWindows(ListView tableListView)
+        public TableWindows(ListView _tableListView)
         {
+            TableListView= _tableListView;
             InitializeComponent();
         }
     }

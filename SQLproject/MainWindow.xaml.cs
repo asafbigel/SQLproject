@@ -24,33 +24,40 @@ namespace SQLproject
         {
             InitializeComponent();
         }
+        //private void ManagerWindow_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    if (Pages.SelectedItem == null)
+        //        return;
+        //    string option = ((TextBlock)Pages.SelectedItem).Text;
+        //    switch (option)
+        //    {
+        //        case "Querys":
+        //            View.Content = new QuerysPage();
+        //            break;
+        //        case "Tables":
+        //            View.Content = new TablesPage(); break;
+        //        case "Exit":
+        //            Close();
+        //            break;
+        //        default:
+        //            break;
+        //    }
+        //}
+
         private void Tables_Click(object sender, RoutedEventArgs e)
         {
-            View.Content = new TablesPage();
-        }
-        private void Querys_Click(object sender, RoutedEventArgs e)
-        {
-            View.Content = new QuerysPage();
-        }
-        private void ManagerWindow_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (Pages.SelectedItem == null)
-                return;
-            string option = ((TextBlock)Pages.SelectedItem).Text;
-            switch (option)
-            {
-                case "Querys":
-                    View.Content = new QuerysPage();
-                    break;
-                case "Tables":
-                    View.Content = new TablesPage(); break;
-                case "Exit":
-                    Close();
-                    break;
-                default:
-                    break;
-            }
+            new TablesWindows("tables").Show();
         }
 
+        private void Querys_Click(object sender, RoutedEventArgs e)
+        {
+            new TablesWindows("querys").Show();
+
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

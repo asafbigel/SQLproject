@@ -12,11 +12,11 @@
             <ColumnDefinition Width="17*"/>
         </Grid.ColumnDefinitions>
         <ListBox x:Name="Pages" Grid.Column="1" IsEnabled="{Binding IsChecked, ElementName=EnableListBox}"
-                 SelectionChanged ="ManagerWindow_SelectionChanged" FontSize="24" HorizontalAlignment="Center"
+                FontSize="24" HorizontalAlignment="Center"
                  VerticalAlignment="Center" Panel.ZIndex="60" BorderBrush="White" >
-            <TextBlock Text="Tables" Margin="0,0,0,0" />
-            <TextBlock Text="Querys" Margin="0,0,0,0" />
-            <TextBlock Text="Exit" Margin="0,0,0,0" />
+            <Button Name="Exit" Content="Exit" Margin="0,0,0,0" Click="Exit_Click" />
+            <Button Name="Querys" Content="Querys" Click="Querys_Click"/>
+            <Button Name="Tables" Content="Tables" Click="Tables_Click"/>
         </ListBox>
         <Frame x:Name="View" Grid.Column="0" NavigationUIVisibility="Hidden" Margin="50,50,0,50"/>
     </Grid>
